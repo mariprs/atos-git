@@ -25,9 +25,7 @@ COMPOSE_PROJECT_NAME=getby docker-compose up
 
 Equações podem ser escritas usando LaTeX:
 
-$$(m^e)^d \equiv m (\mod n)$$
-
-$$V = \frac{\sum^{n}_{i=1}(x_{i} - \overline{x})^{2}}{n}$$
+$$V_{sphere} = \frac{4}{3}\pi r^3$$
 
 ## Mermaid (Sem suporte para celular)
 
