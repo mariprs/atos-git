@@ -6,7 +6,7 @@ Instalando Git:
 **ou**
 * Instale o Git Bash diretamente no website do Git
 
-# Gerenciando configurações usando `git config`:
+## Gerenciando configurações usando `git config`:
 * git config --global user.name <username>
 * git config --global user.email <email_addr>
 * `git config --system core.editor <insira seu editor aqui>` -> o Git pode solicitar que você insira texto em um editor para editar um arquivo se precisar de mais informações (se você não der um commit com mensagem, por exemplo)
@@ -26,14 +26,14 @@ Instalando Git:
 * `git reset HEAD <file>`: desfaz o staging de alterações a serem confirmadas, permitindo que você reavalie as alterações antes de confirmá-las.
 
 
-# Arquivos GIGANTESCOS (ou "você já ouviu falar do Git LFS?")
+## Arquivos GIGANTESCOS (ou "você já ouviu falar do Git LFS?")
 * O Git bloqueia arquivos maiores que 100 MiB; para qualquer coisa maior que isso, você deve usar **Git Large File Storage (Git LFS)**.
 * Se você tentar adicionar ou atualizar um arquivo maior que 50 MiB, receberá um aviso do Git. As alterações ainda serão enviadas com sucesso para o seu repositório, mas é um aviso interessante para te fazer considerar remover o commit para minimizar o impacto no desempenho. Para removê-lo, faça o seguinte:
   1. `git rm --cached <arquivo-gigantesco>` # isso não removerá o arquivo do disco, a propósito
   2. `git commit --amend -CHEAD` # este comando altera o commit anterior com sua alteração. Meramente criar um novo commit não funcionará, pois você precisa remover o arquivo do histórico não enviado também.
   3. `git push` # agora enviamos o commit sem o arquivo gigantesco
 
-# "Acidentalmente inseri dados sensíveis em um repositório, excluir e fazer um commit novo funcionará para removê-lo completamente de pessoas maliciosas da internet?" Não.
+## "Acidentalmente inseri dados sensíveis em um repositório, excluir e fazer um commit novo funcionará para removê-lo completamente de pessoas maliciosas da internet?" Não.
 Você precisará removê-lo do histórico do repositório. Pra isso, há duas opções: você pode usar o BFG Repo-Cleaner (ferramenta de código aberto, mais rápida e mais simples que a próxima solução) ou a ferramenta `git filter-repo`, como visto abaixo:
 
 1. **Começando com BFG**:
@@ -59,13 +59,7 @@ Você precisará removê-lo do histórico do repositório. Pra isso, há duas op
 1. Entre em contato com o Github através do Portal de Suporte do Github.
 2. Diga aos colegas de trabalho para dar rebase e não fazer merge nos branches que criaram com base no histórico antigo do seu repositório, senão você terá que refazer todo o passo a passo anterior.
 
-* git reset HEAD <file>: unstage changes to be commited
 
-
-
-# **After using each one of those tools, you'll have to remove the sensitive data from Github:**
-1. Contact Github through the Github Support Portal
-2. Tell co-workers to rebase and not merge an branches they created off of your old repository history. 
 
 To write:
 # Branching
@@ -82,7 +76,7 @@ With this command you can see all commits with info about their author (includin
 (insert what it is and mention `git config --global core.excludesfile <path>` as an alternative means, add that .gitignore will not work if you already commited the files)
 # O que é GitOps?
 
-# Sources
+## Referências
 [Git-scm (PT-BR) on Merging and Rebasing](https://git-scm.com/book/pt-br/v2/Branches-no-Git-Rebase)
 [Git docs on Git Tags](https://docs.github.com/pt/rest/git/tags?apiVersion=2022-11-28)
 [Git docs on Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage)
