@@ -1,10 +1,10 @@
 ## Quick start - Git installation
 Instalando Git:
-* sudo yum install git: para sistemas baseados no Debian, como Ubuntu.
+* sudo yum install git: para sistemas baseados em Red Hat, como o CentOS. 
 **ou**
-* sudo apt-get install git: para sistemas baseados em Red Hat, como o CentOS. 
+* sudo apt-get install git: para sistemas baseados no Debian, como Ubuntu.
 **ou**
-* Instale o Git Bash diretamente no website do Git
+* Instale o Git diretamente no website junto com o Git GUI
 
 ## Gerenciando configurações usando `git config`:
 * git config --global user.name <username>
@@ -24,6 +24,7 @@ Instalando Git:
 * `git rm <arquivo>`: quando você não quer mais rastrear um arquivo, remova-o da árvore usando este comando. Esse comando também excluirá o arquivo. 🫠
 * `git checkout -- <arquivo>`: descarta as alterações do diretório de trabalho. Se você excluir algo acidentalmente, com esse comando Git o ressuscitará.
 * `git reset HEAD <file>`: desfaz o staging de alterações a serem confirmadas, permitindo que você reavalie as alterações antes de confirmá-las.
+* `git commit --dry-run`: dry run simula o comando e mostra o que aconteceria sem realmente fazê-lo.
 
 
 ## Arquivos GIGANTESCOS (ou "você já ouviu falar do Git LFS?")
@@ -77,7 +78,10 @@ With this command you can see all commits with info about their author (includin
 # O que é GitOps?
 
 ## Referências
-[Git-scm (PT-BR) on Merging and Rebasing](https://git-scm.com/book/pt-br/v2/Branches-no-Git-Rebase)
-[Git docs on Git Tags](https://docs.github.com/pt/rest/git/tags?apiVersion=2022-11-28)
-[Git docs on Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage)
-[Git docs on removing sensitive info from your repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
+    [Git-scm (PT-BR) on Merging and Rebasing](https://git-scm.com/book/pt-br/v2/Branches-no-Git-Rebase)
+
+    [Git docs on Git Tags](https://docs.github.com/pt/rest/git/tags?apiVersion=2022-11-28)
+
+    [Git docs on Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage)
+
+    [Git docs on removing sensitive info from your repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
